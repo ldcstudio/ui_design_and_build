@@ -1,0 +1,59 @@
+import 'package:flutter/material.dart';
+
+const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: darkBlue,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Center(
+          child: Card(
+            color: Colors.white,
+            child: DemoCard(),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class DemoCard extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 81.0,
+      width: 344,
+      padding: const EdgeInsets.all(16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const <Widget>[
+          Text(
+            'Card title',
+            style: TextStyle(
+              fontSize: 21.0,
+              color: darkBlue,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(height: 8.0),
+          Text(
+            'Secondary text',
+            style: TextStyle(
+              fontSize: 14.0,
+              color: darkBlue,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
