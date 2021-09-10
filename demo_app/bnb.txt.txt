@@ -1,0 +1,49 @@
+import 'package:flutter/material.dart';
+
+const Color kPrimaryColorDark = Color(0xFF273D5C);
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  final List<BottomNavigationBarItem> _bnbItems =
+      const <BottomNavigationBarItem>[
+    BottomNavigationBarItem(
+      icon: Icon(Icons.home, color: Colors.white),
+      label: 'Home',
+      backgroundColor: kPrimaryColorDark,
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.event, color: Colors.white),
+      label: 'Event',
+      backgroundColor: kPrimaryColorDark,
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.library_books, color: Colors.white),
+      label: 'Library',
+      backgroundColor: kPrimaryColorDark,
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.favorite, color: Colors.white),
+      label: 'Favorite',
+      backgroundColor: kPrimaryColorDark,
+    ),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        bottomNavigationBar: BottomNavigationBar(
+          selectedItemColor: Colors.white,
+          backgroundColor: kPrimaryColorDark,
+          currentIndex: 0,
+          onTap: (int index) {},
+          items: _bnbItems,
+        ),
+      ),
+    );
+  }
+}

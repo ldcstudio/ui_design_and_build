@@ -14,7 +14,8 @@ Follow these steps:
 
 ## Screenshots (i.e. Full Demo)
 <p align="center">
-  <img src="screenshots/demo.png" width="256" hspace="16" vspace="16">
+  <img src="screenshots/demo_01.png" width="256" hspace="16" vspace="16">
+  <img src="screenshots/demo_02.png" width="256" hspace="16" vspace="16">
 </p>
 
 ## Resources
