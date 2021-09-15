@@ -1,0 +1,41 @@
+import 'package:flutter/material.dart';
+
+const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: darkBlue,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        bottomNavigationBar: BottomNavigationBar(
+          selectedItemColor: Colors.white,
+          backgroundColor: Colors.blue,
+          currentIndex: 0,
+          onTap: (int index) {},
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.favorite),
+              label: 'Favorites',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.music_note),
+              label: 'Music',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.chrome_reader_mode),
+              label: 'Books',
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

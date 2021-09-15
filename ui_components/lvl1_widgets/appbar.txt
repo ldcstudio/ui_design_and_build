@@ -1,0 +1,65 @@
+import 'package:flutter/material.dart';
+
+const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: darkBlue,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Center(
+          child: DemoAppBar(),
+        ),
+      ),
+    );
+  }
+}
+
+class DemoAppBar extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: Update the AppBar color on ln32 (Colors.blue) to another color (eg. Colors.green)
+    return Container(
+      height: 56.0,
+      color: Colors.blue,
+      padding: const EdgeInsets.all(16.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          // TODO: Update the AppBar title on ln43 ('Page title') to another title (eg. 'Instagram')
+          Row(
+            children: const <Widget>[
+              Icon(Icons.menu),
+              SizedBox(width: 24),
+              Text(
+                'Page title',
+                style: TextStyle(
+                  fontSize: 20.0,
+                  color: Colors.white,
+                ),
+              ),
+            ],
+          ),
+          // TODO: Update the share Icon on ln54 (Icons.share) to another Icon (eg. Icons.camera)
+          Row(
+            children: const <Widget>[
+              Icon(Icons.share),
+              SizedBox(width: 24),
+              Icon(Icons.search),
+              SizedBox(width: 24),
+              Icon(Icons.more_vert),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
